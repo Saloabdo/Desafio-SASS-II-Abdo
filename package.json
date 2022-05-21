@@ -1,0 +1,25 @@
+{
+  "name": "desafio-sass-ii-abdo",
+  "version": "1.0.0",
+  "description": "se genera desafio correpsondiente a la unidad SASS II",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build-css": "node-sass --include-path scss scss/style.scss css/stylecss.css",
+    "watch-css": "nodemon -e scss -x \"npm run build-css\""
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Saloabdo/Desafio-SASS-II-Abdo.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Saloabdo/Desafio-SASS-II-Abdo/issues"
+  },
+  "homepage": "https://github.com/Saloabdo/Desafio-SASS-II-Abdo#readme",
+  "devDependencies": {
+    "node-sass": "^7.0.1",
+    "nodemon": "^2.0.16"
+  }
+}
