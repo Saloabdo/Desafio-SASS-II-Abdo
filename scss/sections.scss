@@ -1,10 +1,10 @@
 .carousel-caption p{
     font-size: $size-320-sec;
-    color:$color-primary
+    color:$color-primary;
 
 }
 .carousel-caption h5{
-    color: $color-primary
+    color: $color-primary;
 }
 .carousel-slide img{
     height: 50px;
@@ -19,20 +19,22 @@ main{
     padding: 1px;}
 
 .image {
-        width: 200px;
-        position: left;
+        width: 190px;
+        position: rigth;
 }
 
 .text {
+    @extend .text2;
     color: black; 
     font-style: italic;
+}
+.text {
     font-size: $size-320-prim;
     
 }
 
 .text2{
-    color: black; 
-    font-style: italic;
+
     font-size:$size-320-sec;
 }
 
@@ -62,6 +64,12 @@ footer{
     color: $color-primary;
     background-image: url(../Imagenes/floor-tile.png);
     grid-area: footer;
+}
+
+@for $x from 1 through 6 {
+    h#{$x} {
+        font-size: 40px / $x;
+    }
 }
 
 @media screen and (min-width:768px) {
@@ -109,6 +117,11 @@ footer{
     width: 30px;
     height: 30px;
 }
+@for $x from 1 through 6 {
+    h#{$x} {
+        font-size: 50px / $x;
+    }
+}
 }
 
 @media screen and (min-width:1024px) {
@@ -152,5 +165,9 @@ height: 300px;
 width: 40px;
 height: 40px;
 }
-
+@for $x from 1 through 6 {
+    h#{$x} {
+        font-size: 70px / $x;
+    }
+}
 }
