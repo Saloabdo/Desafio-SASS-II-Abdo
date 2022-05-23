@@ -1,4 +1,4 @@
-.card-father{
+.prod{
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
@@ -18,6 +18,33 @@
     padding: none;
    
 }
+//MIXIN
+@mixin sizes ($width, $height, $align) {
+    height: $height;
+    width: $width;
+    align-items: $align;
+}
+.card-img-top{
+    @include sizes (115px, 115px, center);
+} 
+
+
+
+//MAPS
+$productos: (
+    ceramico: beige, 
+    griferia:beige,
+    alacenasybajomesadas: beige,
+);
+@each $prod, $color in $productos {
+    .prod-#{$prod} {
+        background-color: $color;
+        width: 126px;
+        height: auto;
+        justify-content: space-between;
+    }
+}
+
 .card-body h5{
     font-size: $size-320-prim ;
 }
@@ -32,6 +59,21 @@
         width: 210px;
         height: auto;
     }
+    //MIXIN
+
+    .card-img-top{
+        @include sizes (200px, 200px, center);
+    } 
+    //MAPS
+   
+@each $prod, $color in $productos {
+    .prod-#{$prod} {
+        background-color: $color;
+        width: 210px;
+        height: auto;
+        justify-content: space-between;
+    }
+}
 
     .card-img-top{
         width: 200px;
@@ -57,7 +99,23 @@
         width: 300px;
         height: auto;
     }
+    //MIXIN
 
+    .card-img-top{
+        @include sizes (290px, 290px, center);
+    } 
+
+    //MAPS
+    
+    @each $prod, $color in $productos {
+        .prod-#{$prod} {
+            background-color: $color;
+            width: 300px;
+            height: auto;
+            justify-content: space-between;
+            padding: 5px 5px;
+        }
+    }
     .card-img-top{
         width: 290px;
         height: 290px;
@@ -65,6 +123,7 @@
         padding: none;
 
     }
+
     .card-body h5{
         font-size: $size-1024-prim ;
     }
